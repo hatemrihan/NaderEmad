@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NADER</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/bootstrap-responsive.css">
+        <link rel="stylesheet" href="css/font-awesome.css">
+        <link rel="stylesheet" href="css/app.css">
+            <link rel="stylesheet" href="css/font-awesome-ie7.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css">
+</head>
+<body>
+  
+       <section class="header">
+         <nav>
+            <a href="index.html" class="img"><strong>N-E</strong></a>
+         <div class="nav-links" id="navLinks">
+<i class="fa fa-times" onclick="hideMenu()" ></i>
+      <ul>
+         <li><a href="index.html">HOME</a></li>
+         <li><a href="About.html">ABOUT</a></li>
+         <li><a href="Contact.html">CONTACT</a></li>
+         <li><a href="Programs.html">PROGRAMS</a></li>
+      </ul>
+         </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+   </nav> 
+   <div class="text-box">
+      <h1>NADER EMAD</h1>
+      <p><strong>WHERE IS STRENGTH MOBILITY AND BODYBUILDING</strong></p>
+      <a href="Contact.html" class="hero-btn">JOIN ME NOW</a>
+   </div>
+</section>
+   <div class="section2">
+      <div class="container2">
+         <div class="title2">
+            <h1>ABOUT</h1>
+         </div>
+         <div class="content2">
+            <div class="article2">
+               <h3>Head coach and CPT - sports has been always my passion. I started off at an early age and i never stopped. From gymnastics athlete to dancer and to a bodybuilder now. 10 years of fitness and 18 years of dancing and still more.. </h3>
+               <p><strong> Ballet institution,Austria - European Ballet Conservatory gradute, Austria - Choreography and Dance Diploma, St. polten - Certified Spinng instructor - Certified TRX & CORE X - Certified NASM & ISSA.</strong></p>
+               <div class="button2">
+                  <a href="About.html">READ MORE</a>
+               </div>
+            </div>
+         </div>
+         <div class="image-section">
+            <img src="images/about.jpg" alt="">
+         </div>
+         <div class="social2">
+            <a href="https://www.facebook.com/share/18X8PFGZRm/?mibextid=wwXIfr"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/naderemad_?igsh=eWRoNmNhMTBydDZh"><i class="fab fa-instagram"></i></a>
+         </div>
+         </div>
+      </div>
+   </div>
+
+  
+
+   <!-- javascript -->
+   <script>
+      var navLinks= document.getElementById("navLinks");
+      function showMenu(){
+         navLinks.style.right="0";
+      }
+      function hideMenu(){
+         navLinks.style.right="-200px";
+      }
+   </script>
+  <section class="hola">
+      <script>
+
+document.addEventListener('DOMContentLoaded', function() {
+  const wordList = document.querySelector('[data-looping-words-list]');
+  const words = Array.from(wordList.children);
+  const totalWords = words.length;
+  const wordHeight = 100 / totalWords; // Offset as a percentage
+  const edgeElement = document.querySelector('[data-looping-words-selector]');
+  let currentIndex = 0;
+  function updateEdgeWidth() {
+    const centerIndex = (currentIndex + 1) % totalWords;
+    const centerWord = words[centerIndex];
+    const centerWordWidth = centerWord.getBoundingClientRect().width;
+    const listWidth = wordList.getBoundingClientRect().width;
+    const percentageWidth = (centerWordWidth / listWidth) * 100;
+    gsap.to(edgeElement, {
+      width: `${percentageWidth}%`,
+      duration: 0.5,
+      ease: 'Expo.easeOut',
+    });
+  }
+  function moveWords() {
+    currentIndex++;
+    gsap.to(wordList, {
+      yPercent: -wordHeight * currentIndex,
+      duration: 1.2,
+      ease: 'elastic.out(1, 0.85)',
+      onStart: updateEdgeWidth,
+      onComplete: function() {
+        if (currentIndex >= totalWords - 3) {
+          wordList.appendChild(wordList.children[0]);
+          currentIndex--;
+          gsap.set(wordList, { yPercent: -wordHeight * currentIndex });
+          words.push(words.shift());
+        }
+      }
+    });
+  }
+  updateEdgeWidth();
+  gsap.timeline({ repeat: -1, delay: 1 })
+    .call(moveWords)
+    .to({}, { duration: 2 })
+    .repeat(-1);
+});
+      </script>
+      <section class="cloneable">
+         <!-- <video src="images/BICEPS GYM VID.mp4" autoplay loop muted >jdsss</video> -->
+         <video src="images/theone.mp4" autoplay loop muted></video>
+         <div class="looping-words">
+           <div class="looping-words__containers">
+             <ul data-looping-words-list="" class="looping-words__list">
+               <li class="looping-words__list">
+                 <p class="looping-words__p">I WILL</p>
+               </li>
+               <li class="looping-words__list">
+                 <p class="looping-words__p">NEVER</p>
+               </li>
+               <li class="looping-words__list">
+                 <p class="looping-words__p">LEAVE</p>
+               </li>
+               <li class="looping-words__list">
+                 <p class="looping-words__p">YOU</p>
+               </li>
+               <li class="looping-words__list">
+                 <p class="looping-words__p">ALONE</p>
+               </li>
+             </ul>
+           </div>
+           <div class="looping-words__fade"></div>
+           <div data-looping-words-selector="" class="looping-words__selector">
+             <div class="looping-words__edge"></div>
+             <div class="looping-words__edge is--2"></div>
+             <div class="looping-words__edge is--3"></div>
+             <div class="looping-words__edge is--4"></div>
+           </div>
+         </div>
+     </section>
+     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  </section>
+  <section class="campus">
+   <h1><strong>JOIN NOW</strong></h1>
+   <P>CARING AS I AM THE ONE WHO TRAINING..</P>
+   <div class="row">
+    
+      <div class="campus-col">
+      <img src="images/bag.jpg" alt="">
+         <div class="layer">
+            <h3>PT ON GROUND</h3>
+         </div>
+      </div>
+
+      <div class="campus-col">
+         <img src="images/bar.jpg" alt="">
+         <div class="layer">
+            <h3>PT ONLINE</h3>
+         </div>
+      </div>
+
+     <div class="campus-col">
+        <img src="images/last.jpg" alt="">
+         <div class="layer">
+            <h3>NUTRITION</h3>
+         </div>
+      </div>
+   </div>
+   <script>
+      // Detect touch devices
+function isTouchDevice() {
+    return ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+}
+
+// Add hover effect on touch
+document.addEventListener('DOMContentLoaded', function() {
+    if (isTouchDevice()) {
+        const images = document.querySelectorAll('.your-image-class');
+
+        images.forEach(img => {
+            // Add hover effect on touch
+            img.addEventListener('touchstart', function(e) {
+                e.preventDefault();
+                this.classList.add('hover-active');
+            });
+
+            // Remove effect when touching elsewhere
+            document.addEventListener('touchstart', function(e) {
+                if (!e.target.closest('.campus-col img')) {
+                    images.forEach(img => img.classList.remove('hover-active'));
+                }
+            });
+        });
+    }
+});
+
+document.addEventListener('touchstart', function(e) {
+                if (!e.target.closest('.campus-col img')) {
+                    images.forEach(img => img.classList.remove('hover-active'));
+                }
+            });
+   
+
+document.addEventListener('touchstart', function(e) {
+                if (!e.target.closest('.campus-col img')) {
+                    images.forEach(img => img.classList.remove('hover-active'));
+                }
+            });
+  
+   </script>
+  </section>
+   
+<!-- start cards  -->
+  <section class="CARDS">
+   <h1><STrong>OUR PROGRAMS</STrong></h1>
+  <div class="program-card">
+   <div class="card-header">
+       <span class="social-media">APPLY NOW</span>
+       <a href="Contact.html" class="website">PROGRAM-1</a>
+   </div>
+
+   <h3 class="program-title">PT ON GROUND - Basic plan</h3>
+
+
+   <p class="duration">3 Months</p>
+
+   <a href="Contact.html"><button class="choose-plan-btn">JOIN NOW</button></a>
+
+   <ul class="features-list">
+       <li class="feature-item">Sports & Clinical Nutrition Plan: Receive a specialized nutrition plan.</li>
+       <li class="feature-item">Personalized Workout Program: Get a personalized workout program.</li>
+       <li class="feature-item">Physical Therapy Integration: Incorporate physical therapy standards.</li>
+       <li class="feature-item">Daily follow up.</li>
+   </ul>
+</div>
+
+<div class="program-card">
+   <div class="card-header">
+       <span class="social-media">APPLY NOW</span>
+       <a href="Contact.html" class="website">PROGRAM-2</a>
+   </div>
+
+   <h3 class="program-title">PT ONLINE</h3>
+
+
+   <p class="duration">3 Months</p>
+
+   <a href="Contact.html"><button class="choose-plan-btn">JOIN NOW</button></a>
+
+   <ul class="features-list">
+       <li class="feature-item">Sports & Clinical Nutrition Plan: Receive a specialized nutrition plan.</li>
+       <li class="feature-item">Personalized Workout Program: Get a personalized workout program.</li>
+       <li class="feature-item">Physical Therapy Integration: Incorporate physical therapy standards.</li>
+       <li class="feature-item">Exclusive follow up with Nader Emad, training programs & daily support.</li>
+       <li class="feature-item">Access to private group - workout log - Video demonstartions - Complete shopping list - Dine in/out option - Allegries/Dislikes Blacklist - Track your progress</li>
+   </ul>
+</div>
+
+<div class="program-card">
+   <div class="card-header">
+       <span class="social-media">APPLY NOW</span>
+       <a href="Contact.html" class="website">PROGRAM-3</a>
+   </div>
+
+   <h3 class="program-title">Nutrition</h3>
+
+
+   <p class="duration">3 Months</p>
+
+   <a href="Contact.html"><button class="choose-plan-btn">JOIN NOW</button></a>
+
+   <ul class="features-list">
+       <li class="feature-item">One month program - Two months program - Juniors - New mama program - Ramadan personalized nutrition program - 40 days of wellness nutrition program.</li>
+       <li class="feature-item">Personalized Workout Program: Get a personalized workout program.</li>
+       <li class="feature-item">Physical Therapy Integration: Incorporate physical therapy standards.</li>
+       <li class="feature-item">Daily follow up.</li>
+   </ul>
+</div>
+<!-- end cards  -->
+<section class="aaaa">
+   <div class="container-a">
+      <div class="palette">
+        <div class="color" style="background-image: url(images/pic1.jpg);"><span>I WILL</span></div>
+        <div class="color" style="background-image: url(images/pic2.jpg);"><span>NEVER</span></div>
+        <div class="color" style="background-image: url(images/pic3.jpg);"><span>LEAVE</span></div>
+        <div class="color" style="background-image: url(images/head.jpg);"><span>YOU</span></div>
+        <div class="color" style="background-image: url(images/pic4.JPG);"><span>ALONE</span></div>
+      </div>
+    </div>
+
+    <script>
+      // Detect touch devices
+function isTouchDevice() {
+    return ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+}
+
+// Add hover effect on touch
+document.addEventListener('DOMContentLoaded', function() {
+    if (isTouchDevice()) {
+        const images = document.querySelectorAll('.your-image-class');
+
+        images.forEach(img => {
+            // Add hover effect on touch
+            img.addEventListener('touchstart', function(e) {
+                e.preventDefault();
+                this.classList.add('hover-active');
+            });
+
+            // Remove effect when touching elsewhere
+            document.addEventListener('touchstart', function(e) {
+                if (!e.target.closest('.color')) {
+                    images.forEach(img => img.classList.remove('hover-active'));
+                }
+            });
+        });
+    }
+});
+    </script>
+  </section>
+
+  </section>
+  <section class="mo">
+
+   <div class="wrapper">
+  
+      <a href="https://www.instagram.com/bf_sportswear?igsh=MW1kdjYxOWxlZzNvbw==" style="--grid-area:cat-sport">
+        <p class="align-right">SportsWare</p>
+        <img src="images/LAST 2.jpg">
+      </a>
+      
+      <a href="https://www.instagram.com/reel/DFasfZOMR1c/?igsh=aDdnbWhxMjZnOW5r" style="--grid-area:cat-tees">
+        <p>SPONSER</p>
+        <img src="images/LAST1.jpg">
+        </a>
+        <a href="https://www.instagram.com/boundofficial__?igsh=MWc4YTVyYWs3MDYxbw==" style="--grid-area:cat-intimate">
+         <p>FOUNDER</p>
+         <img src="images/LAST 3.jpg">
+       </a>
+
+       <a href="https://www.instagram.com/reel/DCkHcIsxOnt/?igsh=MXhlaHc3cGF3Z3RmcA==" style="--grid-area:cat-cologne">
+         <p class="align-right">18 years of dancing</p>
+         <img src="images/dancing.jpg">
+       </a>
+       
+       <a href="https://www.instagram.com/p/CJRZweIBsUa/?igsh=MXJjOTdkaGtnZzdtaw==" style="--grid-area:cat-kids">
+         <p>18 years of fitness</p>
+        <video src="images/CALISTHENICS vid.mp4" autoplay loop muted style="width: 100%; height: 100%; object-fit: cover; right: -2px;"></video>
+       </a>
+       
+       <a href="#" style="--grid-area:cat-youth">
+         <p>SPECIALIST</p>
+         <img src="images/yellow pic.jpg">
+       </a>
+
+       <a href="#" style="--grid-area:cat-hoodies">
+         <p>MODELING</p>
+         <img src="images/IMG_7286.JPG">
+       </a>
+
+       <a href="#" style="--grid-area:cat-mens-shirts">
+         <p>POWER</p>
+         <img src="images/one hand.jpg">
+       </a>
+
+       <a href="https://www.instagram.com/reel/C_yWdoINqp2/?igsh=eWQwcjZjeWllN29i" style="--grid-area:cat-ladies-shirt">
+         <p>BodyBuilding</p>
+       <video src="images/lastttttt.mp4" autoplay loop muted style="width: 100%; height: 100%; object-fit: cover; right: -2px;"></video>
+       </a>
+
+       <a href="Contact.html" style="--grid-area:banner" class="banner">
+         <p><strong>
+            STILL THINKING?
+            APPLY NOW, AND LET'S START YOUR JOURNEY, TOGETHER.
+            YOU WILL NEVER BE ALONE
+         </p></strong>
+        <img src="images/last.jpg" alt="">
+       </a>
+    </div>
+  </section>
+
+  <section class="end">
+   <div class="containerr">
+      <div class="contact-form">
+          <h2 class="form-title">JOIN NOW</h2>
+          <form action="form-handler.php" method="post">
+              <div class="form-group">
+                  <label class="form-label" name="name" for="name">Your Name</label>
+                  <input 
+                      type="text" 
+                      class="form-input" 
+                      placeholder="Enter your name"
+                      id="name"
+                  >
+              </div>
+
+              <div class="form-group">
+               <label class="form-label" name="number" for="number">Your Number</label>
+               <input 
+                   type="number" 
+                   class="form-input" 
+                   placeholder="Enter your number"
+                   id="number"
+               >
+           </div>
+              
+              <div class="form-group">
+                  <label class="form-label" name="email" for="email">Your Email</label>
+                  <input 
+                      type="email" 
+                      class="form-input" 
+                      placeholder="Enter your email"
+                      id="email"
+                  >
+              </div>
+              
+              <div class="form-group">
+                  <label class="form-label" name="message" for="message">Your program</label>
+                  <textarea 
+                      class="form-textarea" 
+                      id=" Your package " 
+                      placeholder="Enter your Package"
+                      rows="4"
+                  ></textarea>
+              </div>
+              
+              <button type="submit" class="submit-btn">
+                  Send Message
+              </button>
+          </form>
+      </div>
+  </div>
+  </section>
+  <div class="contacttt">
+   <div class="containerrr">
+     <h2 class="special-heading">MADE WITH LOVE.</h2>
+     <p>We are born to transform lives</p>
+     <div class="info">
+       <p class="label">Feel free to drop us a line at:</p>
+       <a href="mailto:Nader.emad.25@mail.com?subject=Contact" class="link">Nader.emad.25@mail.com</a>
+       <div class="social">
+         Find Us On Social Networks
+         <i class="fab fa-youtube"></i>
+         <i class="fab fa-facebook-f"></i>
+         <i class="fab fa-twitter"></i>
+
+       </div>
+     </div>
+   </div>
+ </div>
+ <!-- End Contact -->
+ <!-- Start Footer -->
+ <div class="footer">&copy; 2025| <span>HATUM</span> All Right Reserved</div>
+ <!-- End Footer -->
+
+  </section>
+
+ 
+</body>
+</html>

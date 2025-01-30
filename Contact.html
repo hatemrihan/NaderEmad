@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NADER</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/bootstrap-responsive.css">
+        <link rel="stylesheet" href="css/font-awesome.css">
+        <link rel="stylesheet" href="css/app.css">
+            <link rel="stylesheet" href="css/font-awesome-ie7.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css">
+</head>
+<body>
+  
+       <section class="header">
+         <nav>
+            <a href="index.html" class="img"><strong>N-E</strong></a>
+         <div class="nav-links" id="navLinks">
+<i class="fa fa-times" onclick="hideMenu()" ></i>
+      <ul>
+         <li><a href="index.html">HOME</a></li>
+         <li><a href="About.html">ABOUT</a></li>
+         <li><a href="Contact.html">CONTACT</a></li>
+         <li><a href="Programs.html">PROGRAMS</a></li>
+      </ul>
+         </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+   </nav> 
+   <div class="text-box">
+      <h1>CONTACT US</h1>
+      <p><strong>WHERE IS STRENGTH MOBILITY AND BODYBUILDING</strong></p>
+      <a href="" class="hero-btn">JOIN ME NOW</a>
+   </div>
+</section>
+<section class="location">
+   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.534748821445!2d31.00153597538971!3d30.021512874935098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14585b3e51185963%3A0x40622f7a480f0bb!2sLA7%20Arkan!5e0!3m2!1sen!2seg!4v1738152653319!5m2!1sen!2seg" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+</section>
+<section class="contactME">
+   <div class="rowww">
+      <div class="contactME-col">
+<div>
+   <i class="fa fa-home"></i>
+   <span>
+      <h5>GYM Location</h5>
+      <p>LA7 Arkan - Golden 8 - Distrct 5 - Up town Cairo</p>
+   </span>
+   
+</div>
+      </div>
+
+      <div class="contactME-col">
+         <div>
+         <i class="fa fa-phone"></i>
+         <span>
+            <h5>+20 10 1822 6899</h5>
+            <p>24/7 Available.</p>
+         </span>
+         </div>
+      </div>
+
+      <div class="contactME-col">
+         <div>
+            <i class="fa fa-envelope"></i> 
+            <span>
+            <h5>info@Nader.emad.25@gmail.com</h5>
+            <p>Email us your query.</p>
+         </span>
+         </div>
+      </div>
+   </div>
+</section>
+ 
+  
+
+   <!-- javascript -->
+   <script>
+      var navLinks= document.getElementById("navLinks");
+      function showMenu(){
+         navLinks.style.right="0";
+      }
+      function hideMenu(){
+         navLinks.style.right="-200px";
+      }
+   </script>
+  
+    
+<!-- end cards  -->
+
+  <section class="end">
+   <div class="containerr">
+      <div class="contact-form">
+          <h2 class="form-title">JOIN NOW</h2>
+          <form action="form-handler.php" method="POST">
+              <div class="form-group">
+                  <label class="form-label" name="name" for="name">Your Name</label>
+                  <input 
+                      type="text" 
+                      class="form-input" 
+                      placeholder="Enter your name"
+                      id="name"
+                  >
+              </div>
+
+              <div class="form-group">
+               <label class="form-label" name="number" for="number">Your Number</label>
+               <input 
+                   type="number" 
+                   class="form-input" 
+                   placeholder="Enter your number"
+                   id="number"
+               >
+           </div>
+              
+              <div class="form-group">
+                  <label class="form-label" name="email" for="email">Your Email</label>
+                  <input 
+                      type="email" 
+                      class="form-input" 
+                      placeholder="Enter your email"
+                      id="email"
+                  >
+              </div>
+              
+              <div class="form-group">
+                  <label class="form-label" name="message" for="message">Your program</label>
+                  <textarea 
+                      class="form-textarea" 
+                      id=" Your package " 
+                      placeholder="Enter your Package"
+                      rows="4"
+                  ></textarea>
+              </div>
+
+              <div class="form-group">
+               <label class="form-label" name="message" for="message">How many meals do you eat per day?</label>
+             
+               <!-- <textarea 
+                   class="form-textarea" 
+                   id=" Your package " 
+                   placeholder="Enter your Package"
+                   rows="4"
+               ></textarea> -->
+               <select name="meals" name="message" id="meals">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="7">+4</option>
+                </select>
+
+                <div class="form-group">
+                  <label class="form-label" name="message" for="message">Fitness Goals</label>
+                  <select name="meals" id="meals">
+                     <option value="1">Weight Loss</option>
+                     <option value="2">Muscle Gain</option>
+                     <option value="3">Endurance</option>
+                     <option value="7">Health</option>
+                   </select>
+
+                   <div class="form-group">
+                     <label class="form-label" name="message" for="message">Do you follow any specific diet?</label>
+                     <select name="meals" id="meals">
+                        <option value="1">None</option>
+                        <option value="2">Low Carb</option>
+                        <option value="3">High Protien</option>
+                        <option value="7">Vegaterian</option>
+                      </select>
+
+                      <div class="form-group">
+                        <label class="form-label" name="message" for="message">Do you track your calories or macronutrients?</label>
+                        <select name="meals" id="meals">
+                           <option value="1">YES</option>
+                           <option value="2">NO</option>
+                          
+                         </select>
+                <style>
+                  select {
+                    width: 100%;
+                    padding: 12px 20px;
+                    margin: 8px 0;
+                    display: inline-block;
+                    border: 1px solid #ccc;
+                    border-radius: 17px;
+                    box-sizing: border-box;
+                    background-color: #dfe4e6;
+                  }
+                 
+                </style>
+              </div>
+             <button type="submit" class="submit-btn">
+                  Send Message
+              </button>
+          </form>
+      </div>
+  </div>
+  </section>
+  <div class="contacttt">
+   <div class="containerrr">
+     <h2 class="special-heading">MADE WITH LOVE.</h2>
+     <p>We are born to transform lives</p>
+     <div class="info">
+       <p class="label">Feel free to drop us a line at:</p>
+       <a href="mailto:Nader.emad.25@mail.com?subject=Contact" class="link">Nader.emad.25@mail.com</a>
+       <div class="social">
+         Find Us On Social Networks
+         <i class="fab fa-youtube"></i>
+         <i class="fab fa-facebook-f"></i>
+         <i class="fab fa-twitter"></i>
+       </div>
+     </div>
+   </div>
+ </div>
+ <!-- End Contact -->
+ <!-- Start Footer -->
+ <div class="footer">&copy; 2025| <span>HATUM</span> All Right Reserved</div>
+ <!-- End Footer -->
+
+  </section>
+
+ 
+</body>
+</html>
