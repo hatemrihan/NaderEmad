@@ -5,7 +5,11 @@
     margin: 0;
     padding: 0;
 }
+root{
+overflow-x:hidden;
+}
 body{
+    width: 100%;
     margin: 0;
     font-family: "Open Sans", serif;
     font-optical-sizing: auto;
