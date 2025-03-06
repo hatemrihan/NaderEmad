@@ -129,7 +129,11 @@ if (isOpen) {
     if (!target) return;
     target.scrollIntoView({behavior:'smooth'});
   }
- 
+
+  const handleLogoClick = () => {
+    location.reload();
+  };
+
   return <header>
     <div className="fixed top-0 left-0 w-full h-0 overflow-hidden  z-10" ref={navScope}>
 <nav className="mt-20 flex flex-col">
@@ -153,9 +157,12 @@ if (isOpen) {
 <div className="container !max-w-full bg-stone-900 text-white">
 <div className="flex justify-between h-20 items-center bg-stone-900 text-white">
 <div>
-<a href="/">
-<span className="text-xl font-bold uppercase text-white cursor-pointer hover:text-stone-100 transition-all duration-500">NE</span>
-</a>
+<button 
+  onClick={handleLogoClick}
+  className="cursor-pointer p-2 hover:opacity-70 transition-all duration-300"
+>
+  <span className="text-xl font-bold uppercase text-white cursor-pointer">NE</span>
+</button>
 </div>
 
 </div>
