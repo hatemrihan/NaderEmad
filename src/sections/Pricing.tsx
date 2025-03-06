@@ -1,4 +1,5 @@
 import Button from "@/components/Button";
+import Link from "next/link";
 import { FC } from "react";
 import React from "react";
 
@@ -58,9 +59,9 @@ const Pricing: FC = () => {
             </div>
             
             <div className="mt-auto">
-              <a href="#contact" onClick={handleClickMobileNavItem}>
+            <Link href="/admin">
                 <button className="underline hover:no-underline">Get in touch</button>
-              </a>
+                </Link>
             </div>
           </div>
           
@@ -181,9 +182,9 @@ const Pricing: FC = () => {
             </div>
             
             <div className="mt-auto">
-            <a href="#contact" onClick={handleClickMobileNavItem}>
+           <Link href='/admin'>
               <button className="underline hover:no-underline">Get in touch</button>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

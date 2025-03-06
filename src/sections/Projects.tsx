@@ -14,7 +14,7 @@ const projects = [
   },
 
   {
-    name: "Testimonials",
+    name: "Coaching",
     image: image3,
   },
   {
@@ -33,7 +33,7 @@ const Projects: FC = () => {
       <h2 className="text-4xl md:text-7xl lg:text-8xl">What we do</h2>
       <div className="mt-10 md:mt-16 lg:mt-20">
         {projects.map(( { name, image}) => (
-        <a href="#faqs" key={name} className="border-t last:border-b border-stone-400 border-dotted md:py-8 lg:py-10 py-6 flex flex-col relative group/project ">
+        <a href='/admin' key={name} className="border-t last:border-b border-stone-400 border-dotted md:py-8 lg:py-10 py-6 flex flex-col relative group/project ">
           <div className="absolute bottom-0 left-0 w-full h-0 group-hover/project:h-full transition-all duration-700 bg-stone-700"></div>
 
           <div className="relative">
