@@ -23,6 +23,18 @@ const nextConfig = {
             test: /\.(png|jpg|jpeg|gif|svg)$/i,
             type: 'asset/resource',
         });
+        config.module.rules.push({
+            test: /\.(mp4|webm)$/i,
+            use: [
+                {
+                    loader: 'file-loader',
+                    options: {
+                        publicPath: '/_next',
+                        name: 'static/media/[name].[hash].[ext]',
+                    },
+                },
+            ],
+        });
         return config;
     }
 };
