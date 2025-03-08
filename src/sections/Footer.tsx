@@ -59,7 +59,7 @@ const Footer: FC = () => {
 <h2 className="text-4xl md:text-7xl lg:text-8xl mt-8 font-extralight" ref={scope}
 >Enough talk. Lets Transform your Body Together.</h2>
 
-    <a href="mailto:iflagbars@mail.com?subject=Contact" className="link"><Button variant="secondary" className="mt-8"
+    <a href="mailto:Nader.emad.25@gmail.com?subject=Contact" className="link"><Button variant="secondary" className="mt-8"
      iconAfter={
      <div className="size-6 overflow-hidden">
      <div className="w-12 h-6 flex transition-transform duration-300 group-hover/button:-translate-x-1/2">
