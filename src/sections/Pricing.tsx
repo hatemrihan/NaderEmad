@@ -18,7 +18,7 @@ const Pricing: FC = () => {
       <h1 className="text-3xl font-bold text-white mb-8">Programs</h1>
       <div className="w-full max-w-6xl bg-stone-900 text-white rounded-3xl p-12 shadow-xl">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Logo Design Column */}
+          {/* Logo Design Column
           <div className="flex flex-col">
             <div className="flex items-center mb-6">
               <div className="w-6 h-6 mr-2">
@@ -63,7 +63,7 @@ const Pricing: FC = () => {
                 <button className="underline hover:no-underline">Get in touch</button>
                 </Link>
             </div>
-          </div>
+          </div> */}
           
           {/* Mobile Divider */}
           <div className="md:hidden w-full border-t border-gray-700 my-8"></div>
@@ -77,7 +77,7 @@ const Pricing: FC = () => {
                   <path d="M5 19l7-7 7 7" stroke="white" strokeWidth="2" fill="none" />
                 </svg>
               </div>
-              <h2 className="text-xl font-medium">Program 2</h2>
+              <h2 className="text-xl font-medium">Program 1</h2>
             </div>
             
             <div className="mb-6">
@@ -112,7 +112,7 @@ const Pricing: FC = () => {
               </div>
               <div className="flex items-center">
                 <div className="mr-2">→</div>
-                <span>Dine in/out options</span>
+                <span>Track your progress</span>
               </div>
               <div className="flex items-center">
                 <div className="mr-2">→</div>
@@ -142,7 +142,7 @@ const Pricing: FC = () => {
                   <path d="M4 4h4v4H4V4zm6 0h4v4h-4V4zm6 0h4v4h-4V4zm-12 6h4v4H4v-4zm6 0h4v4h-4v-4zm6 0h4v4h-4v-4zm-12 6h4v4H4v-4zm6 0h4v4h-4v-4zm6 0h4v4h-4v-4z" fill="white" />
                 </svg>
               </div>
-              <h2 className="text-xl font-medium">Program 3</h2>
+              <h2 className="text-xl font-medium">Program 2</h2>
             </div>
             
             <div className="mb-6">

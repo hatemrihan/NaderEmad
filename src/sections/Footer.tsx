@@ -7,27 +7,32 @@ import {  useInView } from "motion/react";
 
 
 
-const navItems= [
+const navItems = [
   {
     href: '#intro',
-    label: 'About'
+    label: 'About',
+    isExternal: false
   },
-{
-  href: '#projects',
-  label: 'What we do'
-},
-{
-  href: '#pricing',
-  label: 'Our Prices'
-},
-{
-  href: '#faqs',
-  label: 'FAQs'
-},
-{
-  href: '#contact',
-  label: 'Contact'
-},
+  {
+    href: '#projects',
+    label: 'What we do',
+    isExternal: false
+  },
+  {
+    href: '#pricing',
+    label: 'Our Programs',
+    isExternal: false
+  },
+  {
+    href: '#faqs',
+    label: 'FAQs',
+    isExternal: false
+  },
+  {
+    href: 'https://www.instagram.com/naderemad_?igsh=eWRoNmNhMTBydDZh',
+    label: 'Instagram',
+    isExternal: true
+  },
 ]
 const Footer: FC = () => {
   const {scope, entranceAnimation} =useTextRevealAnimation ();
@@ -38,14 +43,15 @@ const Footer: FC = () => {
       entranceAnimation();
     }
   }, [inView, entranceAnimation]);
-  const handleClickNavItem = (e:MouseEvent<HTMLAnchorElement>) => {
-      e.preventDefault();
-      const url = new URL(e.currentTarget.href);
-      const hash = url.hash;
-      const target = document.querySelector(hash);
-      if (!target) return;
-      target.scrollIntoView({behavior:'smooth'});
-    }
+  const handleClickNavItem = (e:MouseEvent<HTMLAnchorElement>, isExternal: boolean) => {
+    if (isExternal) return;
+    e.preventDefault();
+    const url = new URL(e.currentTarget.href);
+    const hash = url.hash;
+    const target = document.querySelector(hash);
+    if (!target) return;
+    target.scrollIntoView({behavior:'smooth'});
+  }
   return (
   <footer className="bg-stone-900 text-white" id="contact">
     <div className="container">
@@ -77,9 +83,16 @@ const Footer: FC = () => {
 <div>
 
     <nav className="flex flex-col md:items-end gap-8 mt-16 md:mt-0">
-      {navItems.map(({href,label})=>(
-        <a href={href} key={label} onClick={handleClickNavItem}>
-          <Button variant="text" className="text-lg">{label}</Button></a>
+      {navItems.map(({href, label, isExternal}) => (
+        <a 
+          href={href} 
+          key={label} 
+          onClick={(e) => handleClickNavItem(e, isExternal)}
+          target={isExternal ? "_blank" : undefined}
+          rel={isExternal ? "noopener noreferrer" : undefined}
+        >
+          <Button variant="text" className="text-lg">{label}</Button>
+        </a>
       ))}
     </nav>
     </div>

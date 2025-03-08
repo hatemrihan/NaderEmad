@@ -7,7 +7,6 @@ import Intro from "@/sections/Intro";
 import Pricing from "@/sections/Pricing";
 import Projects from "@/sections/Projects";
 import Testimonials from "@/sections/Testimonials";
-import Part from "@/sections/Part";
 import ContactForm from "@/components/forms/ContactForm";
 import PortfolioPage from "@/sections/PortofolioPage";
 
@@ -24,7 +23,7 @@ export default function Home() {
          <Testimonials />
          <Pricing />
          <Projects /> 
-         <Part />
+         {/* <Part /> */}
 <PortfolioPage />
 <FAQs />
         <ContactForm />
